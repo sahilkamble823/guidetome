@@ -134,7 +134,7 @@ function renderColleges(list) {
     <span class="rate">${c.rating}</span> ⭐
     <a href="#">Read Reviews</a>
   </div>
-  <button class="apply-btns">Apply now</button>
+  <button class="apply-btn">Apply now</button>
 
   
 

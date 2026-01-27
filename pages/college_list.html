@@ -5,21 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>College Listing</title>
-
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/college_list.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" />
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" />
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
     <header class="g-header" data-aos="fade-down">
         <div class="header-left">
             <div class="logo">Guide2Me</div>
@@ -40,11 +38,12 @@
             <a href="#" class="signup-btn">Sign up</a>
         </div>
     </header>
+    <!-- BANNER -->
+
 
     <div class="section-wrapper">
-
-        <!-- TITLE + SEARCH -->
         <div class="section-box">
+            <!-- LEFT TEXT -->
             <div class="section-left" data-aos="fade-right">
                 <h2>MBA Colleges in Bangalore (Area-wise)</h2>
                 <p>
@@ -53,6 +52,7 @@
                 </p>
             </div>
 
+            <!-- RIGHT SEARCH -->
             <div class="search-box" data-aos="fade-left">
                 <input type="text" id="searchInput" placeholder="Search college" />
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -61,8 +61,6 @@
                 </svg>
             </div>
         </div>
-
-        <!-- BANNER -->
         <section class="banner" data-aos="zoom-in">
             <div class="banner-content">
                 <img src="../assets/images/scholarship.svg" alt="Scholarship Banner">
@@ -72,15 +70,10 @@
                 <img src="../assets/images/applynow.png" alt="Apply Now">
             </div>
         </section>
-
         <div class="page">
-
-            <!-- FILTERS -->
+            <!-- LEFT FILTERS -->
             <aside class="filters" data-aos="fade-up">
-                <div class="filter-header">
-                    <h3>MBA Filters</h3>
-                    <button class="clear-all">Clear all</button>
-                </div>
+                <!-- <h3>MBA Filters - Bangalore</h3> -->
 
                 <div class="filter-group">
                     <h4>Location (Area)</h4>
@@ -101,7 +94,6 @@
                     <h4>Specialization</h4>
                     <div id="specializationFilters"></div>
                 </div>
-
                 <div class="filter-group">
                     <h4>Exams Accepted</h4>
                     <div id="examFilters"></div>
@@ -118,14 +110,17 @@
                 </div>
             </aside>
 
-            <!-- COLLEGE LIST -->
-            <div class="college-wrapper" data-aos="fade-up">
+            <!-- RIGHT COLLEGE LIST -->
+
+            <div class="college-wrapper"  data-aos="fade-up">
                 <h4>College List</h4>
-                <main class="college-list" id="collegeList"></main>
+                <main class="college-list" id="collegeList" data-aos="fade-up"></main>
+                <!-- Pagination -->
                 <div id="pagination" class="pagination" data-aos="fade-up"></div>
             </div>
         </div>
     </div>
+
 
     <!-- CTA SECTION -->
     <section class="cta-section" data-aos="fade-up">
@@ -220,38 +215,50 @@
             </div>
         </div>
     </section>
-
-    <!-- FOOTER -->
+    
+    <!-- ================= FOOTER ================= -->
     <footer class="g-footer" data-aos="fade-up">
         <div class="footer-top">
             <div class="footer-col">
                 <h4>Guide2Me</h4>
-                <p>Helping students discover the right colleges and courses.</p>
+                <p>
+                 
+                    Helping students discover, compare and apply to the right colleges with confidence.
+                </p>
             </div>
 
             <div class="footer-col">
                 <h4>Explore</h4>
                 <a href="#">Top Colleges</a>
-                <a href="#">Top Universities</a>
-                <a href="#">MBA Colleges</a>
+                <a href="#">Courses</a>
+                <a href="#">Exams</a>
+                <a href="#">Rankings</a>
+            
             </div>
 
             <div class="footer-col">
                 <h4>Resources</h4>
-                <a href="#">Articles</a>
-                <a href="#">Rankings</a>
+                <a href="#">Guides & Articles</a>
+                <a href="#">College Reviews</a>
+                <a href="#">Scholarships</a>
+                <a href="#">FAQ's</a>
             </div>
 
             <div class="footer-col">
                 <h4>Exams</h4>
                 <a href="#">CAT</a>
                 <a href="#">MAT</a>
+                <a href="#">CMAT</a>
+                <a href="#">XAT</a>
+                <a href="#">GMAT</a>
             </div>
 
             <div class="footer-col">
                 <h4>Courses</h4>
                 <a href="#">MBA</a>
                 <a href="#">PGDM</a>
+                <a href="#">Executive MBA</a>
+                <a href="#">Distance MBA</a>
             </div>
         </div>
 
@@ -260,21 +267,19 @@
         </div>
     </footer>
 
-    <!-- JS -->
+
+    <!-- Scripts  -->
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/script.js"></script>
-
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
-            duration: 900,
-            easing: 'ease-in-out',
-            once: true,
-            offset: 120
+            duration: 1000, // animation duration in ms
+            once: true, // animation happens only once
+            offset: 100, // offset (in px) from the original trigger point
         });
     </script>
 
 </body>
+
 </html>
-  

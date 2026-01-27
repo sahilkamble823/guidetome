@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>College Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/description-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <header class="g-header">
-        <div class="header-left">
+    <!-- HEADER -->
+    <header class="g-header" data-aos="fade-down">
+        <div class="header-top">
             <div class="logo">Guide2Me</div>
-            <nav class="main-nav">
+
+            <nav class="main-nav" id="main-nav">
                 <a href="#">All Courses</a>
                 <a href="#">B.Tech</a>
                 <a href="#">MBA</a>
@@ -26,24 +31,31 @@
                 <a href="#">BBA</a>
                 <a href="#">MCA</a>
             </nav>
-        </div>
 
-        <div class="header-right">
             <input class="search-input" type="text" placeholder="Search colleges, courses, exams...">
-            <a href="#" class="login-link">Log in</a>
-            <a href="#" class="signup-btn">Sign up</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header-right">
+                <a href="#" class="login-link">Log in</a>
+                <a href="#" class="signup-btn">Sign up</a>
+            </div>
+
+
         </div>
     </header>
 
+
     <!-- HERO -->
     <div class="hero">
-        <img src="../assets/images/collegedetailsbg.png" class="hero-image">
-
+        <img src="../assets/images/collegedetailsbg.png" class="hero-image" data-aos="zoom-out">
 
         <!-- FLOATING HEADER CARD -->
         <div class="hero-card">
 
-            <div class="hero-left">
+            <div class="hero-left" data-aos="fade-right" data-aos-delay="100">
                 <h2>Institute of Technology, Pune</h2>
                 <p>📍 Shivajinagar, Pune, Maharashtra</p>
 
@@ -53,7 +65,7 @@
                     <span>Autonomous</span>
                 </div>
 
-                <div class="rating">
+                <div class="rating" data-aos="fade-up">
                     <span class="rating-badge">
                         4.3 <i class="fa-solid fa-star"></i>
                     </span>
@@ -63,11 +75,12 @@
                 <div class="rank">🏆 NIRF 2024: Ranked #24 in Engineering</div>
             </div>
 
-            <div class="hero-middle">
+            <div class="hero-middle" data-aos="zoom-in" data-aos-delay="200">
                 <h4>Our Unique Advantage</h4>
                 <p>Apply with confidence.<br>Get Scholarship upto <b> ₹50,000</b></p>
             </div>
-            <div class="hero-right">
+
+            <div class="hero-right" data-aos="fade-left" data-aos-delay="300">
                 <div class="packages">
                     <div>
                         <small>Highest Package</small>
@@ -88,7 +101,6 @@
                     <button class="save-btn">
                         <i class="fa-regular fa-bookmark"></i>
                     </button>
-
                 </div>
             </div>
 
@@ -96,22 +108,24 @@
     </div>
 
     <!-- TABS -->
-    <div class="tabs">
+    <div class="tabs" data-aos="fade-up">
         <a class="active">Overview</a>
-        <a>Courses & Fees</a>
-        <a>Admissions 2025</a>
-        <a>Placements</a>
-        <a>Facilities</a>
-        <a>Reviews</a>
+        <a data-aos="fade-up" data-aos-delay="100">Courses & Fees</a>
+        <a data-aos="fade-up" data-aos-delay="200">Admissions 2025</a>
+        <a data-aos="fade-up" data-aos-delay="300">Placements</a>
+        <a data-aos="fade-up" data-aos-delay="400">Facilities</a>
+        <a data-aos="fade-up" data-aos-delay="500">Reviews</a>
     </div>
 
     <!-- MAIN LAYOUT -->
-    <div class="container">
+    <div class="container" data-aos="fade-up">
+
 
         <!-- LEFT CONTENT -->
         <div class="left">
 
-            <div class="card">
+            <div class="card" data-aos="fade-up">
+
                 <h3>About Institute of Technology, Pune</h3>
                 <br />
                 <p>
@@ -134,7 +148,8 @@
 
             <div class="main-container">
                 <div class="highlights">
-                    <div class="highlight-card">
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="100">
+
                         <i class="fa-solid fa-award"></i>
                         <div>
                             <h4>NAAC A+ Grade</h4>
@@ -142,7 +157,7 @@
                         </div>
                     </div>
 
-                    <div class="highlight-card">
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="200">
                         <i class="fa-solid fa-user-graduate"></i>
                         <div>
                             <h4>100% Placement</h4>
@@ -150,7 +165,7 @@
                         </div>
                     </div>
 
-                    <div class="highlight-card">
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="300">
                         <i class="fa-solid fa-award"></i>
                         <div>
                             <h4>NAAC A+ Grade</h4>
@@ -158,7 +173,7 @@
                         </div>
                     </div>
 
-                    <div class="highlight-card">
+                    <div class="highlight-card" data-aos="zoom-in" data-aos-delay="400">
                         <i class="fa-solid fa-user-graduate"></i>
                         <div>
                             <h4>100% Placement</h4>
@@ -170,7 +185,8 @@
             </div>
 
 
-            <div class="course-card">
+            <div class="course-card" data-aos="fade-up">
+
                 <h3>Courses & Fees</h3>
 
                 <div class="table-wrapper">
@@ -216,33 +232,35 @@
                 <h3>Facilities</h3>
 
                 <div class="facilities">
-                    <div class="facility-item">
+                    <div class="facility-item" data-aos="fade-up" data-aos-delay="100">
+
                         <span class="material-icons">menu_book</span>
                         <p>Central Library</p>
                     </div>
 
-                    <div class="facility-item">
+                    <div class="facility-item" data-aos="fade-up" data-aos-delay="200">
                         <span class="material-icons">wifi</span>
                         <p>Campus Wi-Fi</p>
                     </div>
 
-                    <div class="facility-item">
+                    <div class="facility-item" data-aos="fade-up" data-aos-delay="300">
                         <span class="material-icons">local_cafe</span>
                         <p>Cafeteria</p>
                     </div>
 
-                    <div class="facility-item">
+                    <div class="facility-item" data-aos="fade-up" data-aos-delay="400">
                         <span class="material-icons">fitness_center</span>
                         <p>Sports Complex</p>
                     </div>
 
-                    <div class="facility-item">
+                    <div class="facility-item" data-aos="fade-up" data-aos-delay="500">
                         <span class="material-icons">local_hospital</span>
                         <p>Medical Facility</p>
                     </div>
                 </div>
             </div>
-            <div class="card review-card">
+            <div class="card review-card" data-aos="fade-up">
+
                 <h3>Reviews & Rating</h3>
 
                 <div class="review-wrapper">
@@ -280,7 +298,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card student-reviews">
+            <div class="card student-reviews" data-aos="fade-up">
+
                 <h3>
                     What students say about –
                     <span>Institute of Technology, Pune</span>
@@ -326,7 +345,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="card faq-card">
+            <div class="card faq-card" data-aos="fade-up">
+
                 <h3 class="faq-title">
                     Commonly asked questions <span class="faq-icon">💬</span>
                 </h3>
@@ -373,231 +393,236 @@
                 </div>
             </div>
             <section class="discover-section">
-  <h3 class="section-title">Discover More Colleges</h3>
+                <h3 class="section-title">Discover More Colleges</h3>
 
-  <div class="college-grid">
+                <div class="college-grid">
 
-    <!-- CARD -->
-    <div class="college-card">
-      <div class="college-img">
-        <span class="badge">IITs & NITs</span>
-        <img src="../assets/images/college1.jpg" alt="College">
-      </div>
+                    <!-- CARD -->
+                    <div class="college-card" data-aos="zoom-in" data-aos-delay="100">
 
-      <h4>National level IITs & NITs</h4>
-      <p class="sub-text">India-wide JEE Main / Advanced</p>
+                        <div class="college-img">
+                            <span class="badge">IITs & NITs</span>
+                            <img src="../assets/images/college1.jpg" alt="College">
+                        </div>
 
-      <div class="rating">
-        <span class="stars">4.7 ★★★★★</span>
-      </div>
+                        <h4>National level IITs & NITs</h4>
+                        <p class="sub-text">India-wide JEE Main / Advanced</p>
 
-      <p class="package">Avg package : ₹20–30 LPA</p>
-      <a href="./college_list.html" class="view-link">View list</a>
-    </div>
+                        <div class="rating">
+                            <span class="stars">4.7 ★★★★★</span>
+                        </div>
 
-    <!-- CARD -->
-    <div class="college-card">
-      <div class="college-img">
-        <span class="badge">IITs & NITs</span>
-        <img src="../assets/images/college2.jpeg" alt="College">
-      </div>
+                        <p class="package">Avg package : ₹20–30 LPA</p>
+                        <a href="./college_list.html" class="view-link">View list</a>
+                    </div>
 
-      <h4>National level IITs & NITs</h4>
-      <p class="sub-text">India-wide JEE Main / Advanced</p>
+                    <!-- CARD -->
+                    <div class="college-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="college-img">
+                            <span class="badge">IITs & NITs</span>
+                            <img src="../assets/images/college2.jpeg" alt="College">
+                        </div>
 
-      <div class="rating">
-        <span class="stars">4.7 ★★★★★</span>
-      </div>
+                        <h4>National level IITs & NITs</h4>
+                        <p class="sub-text">India-wide JEE Main / Advanced</p>
 
-      <p class="package">Avg package : ₹20–30 LPA</p>
-      <a href="./college_list.html" class="view-link">View list</a>
-    </div>
+                        <div class="rating">
+                            <span class="stars">4.7 ★★★★★</span>
+                        </div>
 
-    <!-- CARD -->
-    <div class="college-card">
-      <div class="college-img">
-        <span class="badge">IITs & NITs</span>
-        <img src="../assets/images/college.png" alt="College">
-      </div>
+                        <p class="package">Avg package : ₹20–30 LPA</p>
+                        <a href="./college_list.html" class="view-link">View list</a>
+                    </div>
 
-      <h4>National level IITs & NITs</h4>
-      <p class="sub-text">India-wide JEE Main / Advanced</p>
+                    <!-- CARD -->
+                    <div class="college-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="college-img">
+                            <span class="badge">IITs & NITs</span>
+                            <img src="../assets/images/college.png" alt="College">
+                        </div>
 
-      <div class="rating">
-        <span class="stars">4.7 ★★★★★</span>
-      </div>
+                        <h4>National level IITs & NITs</h4>
+                        <p class="sub-text">India-wide JEE Main / Advanced</p>
 
-      <p class="package">Avg package : ₹20–30 LPA</p>
-      <a href="./college_list.html" class="view-link">View list</a>
-    </div>
+                        <div class="rating">
+                            <span class="stars">4.7 ★★★★★</span>
+                        </div>
 
-  </div>
+                        <p class="package">Avg package : ₹20–30 LPA</p>
+                        <a href="./college_list.html" class="view-link">View list</a>
+                    </div>
 
-  <div class="view-more">
-    <a href="#">View More</a>
-  </div>
-</section>
+                </div>
+
+                <div class="view-more">
+                    <a href="#">View More</a>
+                </div>
+            </section>
 
 
 
         </div>
 
-   <!-- RIGHT SIDEBAR -->
-<div class="right">
-
-  <!-- Photos & Videos -->
-  <div class="card">
-    <h3>Photos and Videos</h3>
-  
-    <!-- Top large image -->
-    <div class="gallery-top">
-      <img src="../assets/images/college1.jpg" alt="Main Image">
-    </div>
-  
-    <!-- Row with 2 images -->
-    <div class="gallery-row-2">
-      <img src="../assets/images/college2.jpeg" alt="Image 2">
-      <img src="../assets/images/college1.jpg" alt="Image 3">
-    </div>
-  
-    <!-- 2 rows with 3 images each -->
-    <div class="gallery-row-3">
-      <img src="../assets/images/college1.jpg" alt="Image 4">
-      <img src="../assets/images/college2.jpeg" alt="Image 5">
-      <img src="../assets/images/college1.jpg" alt="Image 6">
-      <img src="../assets/images/college1.jpg" alt="Image 7">
-      <img src="../assets/images/college2.jpeg" alt="Image 8">
-      <img src="../assets/images/college1.jpg" alt="Image 9">
-    </div>
-  </div>
-  
-
-  <!-- Similar Colleges -->
-  <div class="card">
-    <h3>Similar Colleges</h3>
-
-    <div class="college-item">
-      <img src="../assets/images/college1.jpg">
-      <div>
-        <h4>VJTI Mumbai</h4>
-        <p>Mumbai, Maharashtra</p>
-        <a href="#">View Details</a>
-      </div>
-    </div>
-
-    <div class="college-item">
-      <img src="../assets/images/college2.jpeg">
-      <div>
-        <h4>SPIT Mumbai</h4>
-        <p>Mumbai, Maharashtra</p>
-        <a href="#">View Details</a>
-      </div>
-    </div>
-
-    <div class="college-item">
-      <img src="../assets/images/college.png">
-      <div>
-        <h4>Walchand College</h4>
-        <p>Sangli, Maharashtra</p>
-        <a href="#">View Details</a>
-      </div>
-    </div>
-
-    <div class="view-suggestion-wrapper">
-        <a href="#" class="view-suggestion">View all suggestions</a>
-    </div>
-    
-  </div>
-
-  <!-- Updates & News -->
-  <div class="card">
-    <h3>Updates & News</h3>
-
-    <div class="news-item">
-      <span class="dot"></span>
-      <p>Admissions forms for 2025 batch are out.</p>
-    </div>
-
-    <div class="news-item">
-      <span class="dot"></span>
-      <p>New AI & DS lab inaugurated by State Education Minister.</p>
-    </div>
-
-    <div class="news-item">
-      <span class="dot"></span>
-      <p>Semester exams schedule announced.</p>
-    </div>
-  </div>
-
-  <!-- PROMO CARD -->
-  <div class="promo-card">
-    <img src="../assets/images/college1.jpg">
-    <h4>MUMBAI UNIVERSITY</h4>
-
-    <ul>
-      <li>Top Ranked Courses</li>
-      <li>World-Class Faculty</li>
-      <li>Beautiful Campus</li>
-    </ul>
-
-    <button class="apply-now">APPLY NOW</button>
-  </div>
-
-</div>
+        <!-- RIGHT SIDEBAR -->
+        <div class="right" data-aos="fade-left">
 
 
-    </div>
-<footer class="g-footer">
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-col">
-        <h4>Guide2Me</h4>
-        <p>
-          Helping students discover the right colleges,
-          compare MBA courses and make confident admission decisions.
-        </p>
-      </div>
+            <!-- Photos & Videos -->
+            <div class="card" data-aos="fade-left" data-aos-delay="100">
 
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="#">Top Colleges</a>
-        <a href="#">Top Universities</a>
-        <a href="#">MBA Colleges</a>
-        <a href="#">Bangalore Colleges</a>
-        <a href="#">Admissions</a>
-      </div>
+                <h3>Photos and Videos</h3>
 
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <a href="#">Articles</a>
-        <a href="#">College Reviews</a>
-        <a href="#">Rankings</a>
-        <a href="#">Counselling</a>
-      </div>
+                <!-- Top large image -->
+                <div class="gallery-top">
+                    <img src="../assets/images/college1.jpg" alt="Main Image">
+                </div>
 
-      <div class="footer-col">
-        <h4>Exams</h4>
-        <a href="#">CAT</a>
-        <a href="#">MAT</a>
-        <a href="#">CMAT</a>
-        <a href="#">XAT</a>
-        <a href="#">GMAT</a>
-      </div>
+                <!-- Row with 2 images -->
+                <div class="gallery-row-2">
+                    <img src="../assets/images/college2.jpeg" alt="Image 2">
+                    <img src="../assets/images/college1.jpg" alt="Image 3">
+                </div>
 
-      <div class="footer-col">
-        <h4>Courses</h4>
-        <a href="#">MBA</a>
-        <a href="#">PGDM</a>
-        <a href="#">Executive MBA</a>
-        <a href="#">Distance MBA</a>
-      </div>
+                <!-- 2 rows with 3 images each -->
+                <div class="gallery-row-3">
+                    <img src="../assets/images/college1.jpg" alt="Image 4">
+                    <img src="../assets/images/college2.jpeg" alt="Image 5">
+                    <img src="../assets/images/college1.jpg" alt="Image 6">
+                    <img src="../assets/images/college1.jpg" alt="Image 7">
+                    <img src="../assets/images/college2.jpeg" alt="Image 8">
+                    <img src="../assets/images/college1.jpg" alt="Image 9">
+                </div>
+            </div>
+
+
+            <!-- Similar Colleges -->
+            <div class="card">
+                <h3>Similar Colleges</h3>
+                <div class="college-item" data-aos="fade-left" data-aos-delay="200">
+
+                    <img src="../assets/images/college1.jpg">
+                    <div>
+                        <h4>VJTI Mumbai</h4>
+                        <p>Mumbai, Maharashtra</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+
+                <div class="college-item" data-aos="fade-left" data-aos-delay="300">
+                    <img src="../assets/images/college2.jpeg">
+                    <div>
+                        <h4>SPIT Mumbai</h4>
+                        <p>Mumbai, Maharashtra</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+
+                <div class="college-item" data-aos="fade-left" data-aos-delay="400">
+                    <img src="../assets/images/college.png">
+                    <div>
+                        <h4>Walchand College</h4>
+                        <p>Sangli, Maharashtra</p>
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+
+                <div class="view-suggestion-wrapper">
+                    <a href="#" class="view-suggestion">View all suggestions</a>
+                </div>
+
+            </div>
+
+            <!-- Updates & News -->
+            <div class="card">
+                <h3>Updates & News</h3>
+
+                <div class="news-item">
+                    <span class="dot"></span>
+                    <p>Admissions forms for 2025 batch are out.</p>
+                </div>
+
+                <div class="news-item">
+                    <span class="dot"></span>
+                    <p>New AI & DS lab inaugurated by State Education Minister.</p>
+                </div>
+
+                <div class="news-item">
+                    <span class="dot"></span>
+                    <p>Semester exams schedule announced.</p>
+                </div>
+            </div>
+
+            <!-- PROMO CARD -->
+            <div class="promo-card" data-aos="zoom-in">
+
+                <img src="../assets/images/college1.jpg">
+                <h4>MUMBAI UNIVERSITY</h4>
+
+                <ul>
+                    <li>Top Ranked Courses</li>
+                    <li>World-Class Faculty</li>
+                    <li>Beautiful Campus</li>
+                </ul>
+
+                <button class="apply-now">APPLY NOW</button>
+            </div>
+
+        </div>
+
+
     </div>
 
-    <div class="footer-bottom">
-      © 2025 Guide2Me. All rights reserved.
-    </div>
-  </div>
-</footer>
+    <footer class="g-footer" data-aos="fade-up">
+
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Guide2Me</h4>
+                    <p>
+
+                        Helping students discover, compare and apply to the right colleges with confidence.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <a href="#">Top Colleges</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Exams</a>
+                    <a href="#">Rankings</a>
+
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Guides & Articles</a>
+                    <a href="#">College Reviews</a>
+                    <a href="#">Scholarships</a>
+                    <a href="#">FAQ's</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Exams</h4>
+                    <a href="#">CAT</a>
+                    <a href="#">MAT</a>
+                    <a href="#">CMAT</a>
+                    <a href="#">XAT</a>
+                    <a href="#">GMAT</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <a href="#">MBA</a>
+                    <a href="#">PGDM</a>
+                    <a href="#">Executive MBA</a>
+                    <a href="#">Distance MBA</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Guide2Me. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
     <script>
         const faqItems = document.querySelectorAll(".faq-item");
@@ -613,7 +638,25 @@
             });
         });
     </script>
- 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('main-nav');
+
+            hamburger.addEventListener('click', function () {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
 
 </body>
 
