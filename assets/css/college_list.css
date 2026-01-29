@@ -319,14 +319,14 @@ body {
         /* full-width for easy tap */
         padding: 14px 20px;
         /* balanced padding */
-        font-size: 14px;
+        font-size: 12px;
         border-radius: 24px;
     }
 
     .apply-btn,
     .brochure-btn {
         width: 100%;
-        font-size: 14px;
+        font-size: 12px;
 
     }
 }
@@ -689,13 +689,15 @@ body {
     background: #1d6ce5;
     color: #fff;
     border: none;
-    padding: 10px 22px;
+    padding: 0px 22px;
     /* increased horizontal padding */
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
     width: 160px;
+       height: 30px;
+       text-align: center;
     /* NEW: fixed width like reference */
 }
 
@@ -703,12 +705,14 @@ body {
     background: #fff;
     border: 1px solid #1d6ce5;
     color: #1d6ce5;
-    padding: 10px 22px;
+    /* padding: 10px 22px; */
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
     width: 160px;
+    height: 30px;
+    text-align: center;
     /* same width */
 }
 
@@ -732,36 +736,6 @@ body {
 
     .course-box {
         flex-direction: column;
-    }
-}
-@media (max-width: 768px) {
-    /* Make college card stack vertically */
-    .college-card {
-        flex-direction: column !important; /* stack image above content */
-        align-items: stretch;              /* allow full width */
-        gap: 12px;
-    }
-
-    /* College image full width, 70% height */
-    .college-img {
-        width: 100% !important;
-        min-width: 100% !important;
-        height: 70% !important;          /* reduce height */
-        border-radius: 10px;
-    }
-
-    .college-img img {
-        width: 100%;
-        height: 100% !important;         /* fill the 70% container */
-        object-fit: cover;
-    }
-
-    /* Action buttons below image/content */
-    .action-buttons {
-        position: static;
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 10px;
     }
 }
 
@@ -868,6 +842,7 @@ body {
     .apply-btn,
     .brochure-btn {
         width: 100%;
+        font-size: 12px;
     }
 
     /* Fix rating box alignment */
@@ -1471,97 +1446,42 @@ body {
         margin-top: 24px;
         font-size: 12px;
     }
-}/* ================= CRITICAL RESPONSIVE PATCH ================= */
-
-/* Fix huge paddings */
-@media (max-width: 1024px) {
-  :root { --page-body-padding: 20px; }
-}
-
-@media (max-width: 768px) {
-  :root { --page-body-padding: 12px; }
-}
-
-/* Prevent absolute overlap */
-.action-buttons {
-  position: static;
-}
-
-@media (min-width: 901px) {
-  .action-buttons {
-    position: absolute;
-    top: 0;
-    right: 0;
+}/* Large screens */
+@media (max-width: 1366px) {
+  :root {
+    --page-padding: 60px;
+    --page-body-padding: 60px;
   }
 }
 
-/* Safe image & buttons */
-.college-img {
-  max-width: 100%;
-}
-
-.details-btn,
-.apply-btn,
-.brochure-btn {
-  max-width: 100%;
-}
-
-/* Fix rating alignment */
-.rating-box {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-/* Mobile viewport fix */
-.college-wrapper {
-  min-height: 100dvh;
-}
-/* ================= SMALL LAPTOP & iPAD ================= */
+/* Small laptops / tablets */
 @media (max-width: 1200px) {
-
   :root {
     --page-padding: 40px;
     --page-body-padding: 40px;
   }
+}
 
-  
-
-  /* College card spacing */
-  .college-card {
-    gap: 14px;
-    padding: 12px;
-  }
-
-  /* Image shrink */
-  .college-img {
-    width: 220px;
-    min-width: 220px;
-    height: 200px;
-  }
-
-  /* Buttons don't overflow */
-  .apply-btn,
-  .brochure-btn,
-  .details-btn {
-    width: 140px;
-    font-size: 14px;
-  }
-
-  /* Course box tighter */
-  .course-box {
-    gap: 12px;
-    font-size: 12px;
-  }
-
-  /* Rating alignment fix */
-  .rating-box {
-    margin-left: auto;
+/* Tablets / large mobiles */
+@media (max-width: 992px) {
+  :root {
+    --page-padding: 20px;
+    --page-body-padding: 20px;
   }
 }
-@media (max-width: 1366px) {
 
+/* Mobile */
+@media (max-width: 768px) {
   :root {
-    --page-padding: 60px;
-    --page-body-padding: 60px;
+    --page-padding: 12px;
+    --page-body-padding: 12px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  :root {
+    --page-padding: 10px;
+    --page-body-padding: 10px;
   }
 }
