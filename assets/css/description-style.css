@@ -1569,6 +1569,29 @@ padding-bottom: 10px;
     }
 }
 
+/* Mobile: horizontal scroll */
+@media (max-width: 768px) {
+    .college-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    .college-card {
+        flex: 0 0 80%; /* width of each card in scroll */
+        scroll-snap-align: start;
+    }
+
+    .college-grid::-webkit-scrollbar {
+        display: none; /* hide scrollbar for cleaner look */
+    }
+
+    .college-grid {
+        scroll-snap-type: x mandatory;
+    }
+}
+
 /* RIGHT SIDEBAR */
 .right {
     flex: 1;
