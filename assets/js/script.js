@@ -89,6 +89,10 @@ function renderColleges(list) {
       </div>
 
       <p class="location">📍 ${c.area}</p>
+      <p class="college-rating">
+  ⭐ <strong>${c.rating}</strong> / 5
+  <span class="review-link">• Read Reviews</span>
+</p>
 
       <!-- Tags -->
       <div class="tags">
@@ -124,16 +128,12 @@ function renderColleges(list) {
         <div class="links">
           • Admission &nbsp; • Placements &nbsp; • Facilities &nbsp; • Reviews
         </div>
-        <button  class="details-btn">View Details</button>
+     
       </div>
 
       <!-- Right Buttons -->
       <div class="action-buttons">
 
-      <div class="rating-box">
-    <span class="rate">${c.rating}</span> ⭐
-    <a href="#">Read Reviews</a>
-  </div>
   <button class="apply-btn">Apply now</button>
 
   

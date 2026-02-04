@@ -41,6 +41,14 @@ body {
     overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+    :root {
+        --page-padding: 16px;
+        /* mobile safe padding */
+        --page-body-padding: 16px;
+    }
+}
+
 /* ================= HEADER ================= */
 .g-header {
     display: flex;
@@ -157,6 +165,14 @@ body {
     line-height: 1.6;
     margin-bottom: 6px;
     width: 60%;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hero-content p {
+        width: 100%;
+        text-align: justify;
+    }
 }
 
 /* ================= HERO SEARCH ================= */
@@ -320,6 +336,12 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .hero-image-slider {
+        display: none;
+        /* ❌ this will hide it */
+    }
+}
 
 /* ================= HERO TAGS – SIDE CONTAINER ================= */
 
@@ -1089,13 +1111,6 @@ body {
 
 
 /* CARD */
-.course-card {
-    min-width: 400px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-}
 
 /* IMAGE */
 .image-wrap {
@@ -1129,8 +1144,20 @@ body {
 .card-content h3 {
     font-size: 15px;
     font-weight: 600;
+    line-height: 1.4;
     margin-bottom: 6px;
+
+    /* 🔒 FIX HEIGHT FOR ALL TITLES */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* allow max 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    min-height: 42px;
+    /* SAME HEIGHT FOR SHORT & LONG TEXT */
 }
+
 
 .meta {
     font-size: 13px;
@@ -1150,33 +1177,92 @@ body {
     margin-left: 4px;
 }
 
-/* LINK */
-.link {
-    font-size: 15px;
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 600;
+/* CARD BOTTOM */
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* KEY for responsiveness */
 }
 
-/* MOBILE */
+.apply-btn-college {
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+      margin-left: auto;    
+}
+
+.apply-btn-college:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* TABLET & MOBILE */
 @media (max-width: 768px) {
-    .section-header {
-        flex-direction: column;
-        gap: 6px;
+    .course-card {
+        min-width: 100%;
     }
 
+    .card-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .apply-btn-college {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-bottom {
+        flex-direction: row;
+        /* 🔒 force row */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .apply-btn-college {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .meta {
+        font-size: 12px;
+    }
+
+    .card-content h3 {
+        font-size: 14px;
+        min-height: 40px;
+    }
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    
+    /* mobile */
+}
+
+@media (min-width: 769px) {
     .course-card {
-        min-width: 260px;
+        height: 340px;
+        /* desktop */
     }
 }
 
 
 /* ================= QUICK CTA ================= */
-
 .cta-section {
-    /* light grey border */
     border-radius: 14px;
-    /* LEFT & RIGHT padding */
     background: #fff;
     box-sizing: border-box;
 }
@@ -1224,44 +1310,29 @@ body {
     text-decoration: none;
 }
 
+
+.cta-scroll::-webkit-scrollbar {
+    display: none;
+}
+
 /* SCROLL ROW */
 .cta-scroll {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 5 cards */
     gap: 24px;
-    /* equal gap between cards */
-    overflow-x: auto;
-    padding: 30px 30px 30px;
-    padding-top: 20px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.cta-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-
-.cta-scroll::-webkit-scrollbar {
-    display: none;
+    padding: 20px 30px 30px;
 }
 
 /* CARD */
 .cta-card {
-    width: 400px;
-    /* same width for all */
-    height: 300px;
-    /* same height for all */
-    flex-shrink: 0;
-
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-
     display: flex;
     flex-direction: column;
 }
-
 
 /* IMAGE */
 .cta-img {
@@ -1273,6 +1344,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .cta-pill {
@@ -1288,25 +1360,27 @@ body {
 
 /* CONTENT */
 .cta-content {
+    display: flex;
+    flex-direction: column;
     padding: 14px;
+    gap: 6px;
 }
 
+/* Heading & Meta */
 .cta-content h3 {
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin: 0;
 }
 
 .cta-meta {
     font-size: 12px;
     color: #6b7280;
-    margin-bottom: 6px;
 }
 
 .cta-rating {
     font-size: 15px;
     color: #f59e0b;
-    margin-bottom: 4px;
 }
 
 .cta-rating span {
@@ -1317,17 +1391,74 @@ body {
 .cta-sub {
     font-size: 13px;
     color: #6b7280;
-    margin-bottom: 6px;
 }
 
+/* BROCHURE / VIEW BUTTON */
+.cta-brochure,
 .cta-view {
-    font-size: 15px;
-    color: #2563eb;
-    font-weight: 600;
+    align-self: flex-end;
+    /* always right */
+    padding: 8px 16px;
+    background-color: #28a745;
+    /* green button */
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
-/* MOBILE */
+.cta-brochure:hover,
+.cta-view:hover {
+    background-color: #218838;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 1024px) {
+    .cta-card {
+        width: 320px;
+        /* slightly smaller tablet */
+    }
+}
+
+@media (max-width: 1200px) {
+    .cta-scroll {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cta-scroll {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 20px;
+        scrollbar-width: none;
+    }
+
+    .cta-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cta-card {
+        min-width: 260px;
+        /* swipe cards */
+        flex-shrink: 0;
+    }
+
+    .cta-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
 @media (max-width: 768px) {
     .cta-header {
         flex-direction: column;
@@ -1341,9 +1472,21 @@ body {
 
     .cta-card {
         min-width: 260px;
+        /* fit mobile screen */
+        height: auto;
+        /* auto height for mobile */
+    }
+
+    .cta-content {
+        padding: 10px;
+    }
+
+    .cta-brochure,
+    .cta-view {
+        padding: 6px 12px;
+        font-size: 13px;
     }
 }
-
 
 /* ================= FOOTER ================= */
 /* ================= FOOTER ================= */
@@ -1521,9 +1664,6 @@ body {
         padding-right: 16px;
     }
 
-    .course-card {
-        min-width: 260px;
-    }
 }
 
 /* ---------- Large Tablets (≤1200px) ---------- */
@@ -1556,7 +1696,7 @@ body {
 
     .main-nav {
         display: none;
-      
+
     }
 
     .hero {
@@ -2104,10 +2244,18 @@ body {
 }
 
 /* CTA wrapper */
+/* CTA wrapper */
 .guide-cta {
     margin-top: 30px;
-    padding: 20px;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: #ffffff;
+    border-radius: 14px;
 }
+
 
 /* TEXT */
 .cta-text h3 {
@@ -2121,14 +2269,12 @@ body {
     margin-bottom: 16px;
 }
 
-/* FORM — centered & below */
 .cta-form {
     display: flex;
     align-items: center;
     gap: 12px;
     max-width: 420px;
-    margin: 0 auto;
-    /* 🔥 center horizontally */
+    width: 100%;
 }
 
 /* INPUT */
@@ -2138,13 +2284,13 @@ body {
     gap: 10px;
     border: 1px solid #d1d5db;
     border-radius: 30px;
-    padding: 10px 14px;
+    padding: 10px 16px;
     flex: 1;
+    background: #fff;
 }
 
 .input-wrap i {
     color: #f59e0b;
-    /* amber */
     font-size: 14px;
 }
 
@@ -2164,12 +2310,13 @@ body {
     border-radius: 30px;
     font-size: 14px;
     cursor: pointer;
+    white-space: nowrap;
 }
-
 
 .cta-form button:hover {
     background: #d97706;
 }
+
 
 /* Tablet */
 @media (max-width: 992px) {
@@ -2299,14 +2446,14 @@ body {
 }
 
 .articles-section {
-    padding: 60px 0;
+
     background: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    padding: 5px var(--page-body-padding);
+
     margin: auto;
 }
 

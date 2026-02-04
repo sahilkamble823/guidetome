@@ -47,15 +47,30 @@
         </div>
     </header>
 
-
     <!-- HERO -->
     <div class="hero">
-        <img src="../assets/images/collegedetailsbg.png" class="hero-image" data-aos="zoom-out">
+
+        <!-- HERO BACKGROUND -->
+        <div class="hero-bg"></div>
+        <div class="hero-media mobile-only">
+            <img src="../assets/images/college1.jpg" alt="College Media">
+
+            <div class="media-badge">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>1 Video · 7 Photos</span>
+            </div>
+        </div>
+
 
         <!-- FLOATING HEADER CARD -->
         <div class="hero-card">
 
-            <div class="hero-left" data-aos="fade-right" data-aos-delay="100">
+
+            <div class="college-logo">
+                <img src="../assets/images/collegelogo.jpg" alt="College Logo">
+            </div>
+
+            <div class="hero-left">
                 <h2>Institute of Technology, Pune</h2>
                 <p>📍 Shivajinagar, Pune, Maharashtra</p>
 
@@ -65,7 +80,7 @@
                     <span>Autonomous</span>
                 </div>
 
-                <div class="rating" data-aos="fade-up">
+                <div class="rating">
                     <span class="rating-badge">
                         4.3 <i class="fa-solid fa-star"></i>
                     </span>
@@ -75,16 +90,16 @@
                 <div class="rank">🏆 NIRF 2024: Ranked #24 in Engineering</div>
             </div>
 
-            <div class="hero-middle" data-aos="zoom-in" data-aos-delay="200">
+            <div class="hero-middle">
                 <h4>Our Unique Advantage</h4>
-                <p>Apply with confidence.<br>Get Scholarship upto <b> ₹50,000</b></p>
+                <p>Apply with confidence.<br>Get Scholarship upto <b>₹50,000</b></p>
             </div>
 
-            <div class="hero-right" data-aos="fade-left" data-aos-delay="300">
+            <div class="hero-right">
                 <div class="packages">
                     <div>
                         <small>Highest Package</small>
-                        <h4>₹1.2L / year</h4>
+                        <h4>₹1.2 Cr / year</h4>
                     </div>
                     <div>
                         <small>Avg. Package</small>
@@ -95,9 +110,7 @@
                 <button class="apply-btn">Apply Now</button>
 
                 <div class="hero-actions">
-                    <button class="brochure-btn">
-                        ⬇ Brochure
-                    </button>
+                    <button class="brochure-btn">⬇ Brochure</button>
                     <button class="save-btn">
                         <i class="fa-regular fa-bookmark"></i>
                     </button>
@@ -106,6 +119,7 @@
 
         </div>
     </div>
+
 
     <!-- TABS -->
     <div class="tabs" data-aos="fade-up">
@@ -124,27 +138,24 @@
         <!-- LEFT CONTENT -->
         <div class="left">
 
-            <div class="card" data-aos="fade-up">
+            <div class="card about-card" data-aos="fade-up">
 
-                <h3>About Institute of Technology, Pune</h3>
-                <br />
-                <p>
-                    The Institute of Technology is recognized for excellence in education, research, and innovation.
-                    Accredited with the highest grade, it offers world-class programs, state-of-the-art facilities, and
-                    a vibrant learning environment that empowers students to excel in technology and beyond. Our
-                    commitment to quality and academic rigor ensures graduates are well-prepared to lead in their
-                    fields.
-                </p><br />
-                <p>The Institute of Technology is recognized for excellence in education, research, and innovation.
-                    Accredited with the highest grade, it offers world-class programs, state-of-the-art facilities, and
-                    a vibrant learning environment .</p>
-                <br />
-                <p>The Institute of Technology is recognized for excellence in education, research, and innovation.
-                    Accredited with the highest grade, it offers world-class programs, state-of-the-art facilities, and
-                    a vibrant learning environment that empowers students to excel in technology and beyond. Our
-                    commitment to quality and academic rigor ensures graduates are well-prepared to lead in their
-                    fields.</p>
+                <h3 class="about-title">About Institute of Technology, Pune</h3>
+
+                <p class="about-text">
+                    The Institute of Technology, Pune is known for excellence in education,
+                    research, and innovation. With top accreditations, modern infrastructure,
+                    and industry-focused programs, the institute prepares students for
+                    leadership roles in technology and management.
+                </p>
+
+                <div class="about-action">
+                    <a href="#" class="read-more-btn">Read more →</a>
+                </div>
+
             </div>
+
+
 
             <div class="main-container">
                 <div class="highlights">
@@ -228,7 +239,7 @@
                 <div class="view-more">View More</div>
             </div>
 
-            <div class="card">
+            <div class="facility-card">
                 <h3>Facilities</h3>
 
                 <div class="facilities">
@@ -392,13 +403,16 @@
                     </div>
                 </div>
             </div>
-            <section class="discover-section">
-                <h3 class="section-title">Discover More Colleges</h3>
+            <section class="discover-section" data-aos="fade-up">
 
-                <div class="college-grid">
+                <div class="section-header">
+                    <h3 class="section-title">Discover More Colleges</h3>
+                    <a href="./college_list.html" class="view-all">View All</a>
+                </div>
 
-                    <!-- CARD -->
-                    <div class="college-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="college-grid" data-aos="fade-up">
+
+                    <div class="college-card" onclick="openCollegeList()" data-aos="fade-up" data-aos-delay="100">
 
                         <div class="college-img">
                             <span class="badge">IITs & NITs</span>
@@ -412,12 +426,16 @@
                             <span class="stars">4.7 ★★★★★</span>
                         </div>
 
-                        <p class="package">Avg package : ₹20–30 LPA</p>
-                        <a href="./college_list.html" class="view-link">View list</a>
-                    </div>
+                        <div class="card-bottom">
+                            <span class="package">Avg package : ₹20–30 LPA</span>
+                           <a href="./assets/brochures/iit-nit-brochure.pdf" class="cta-brochure" download>
+                            Brochure <span>⬇</span>
+                        </a>
+                        </div>
 
+                    </div>
                     <!-- CARD -->
-                    <div class="college-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="college-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="college-img">
                             <span class="badge">IITs & NITs</span>
                             <img src="../assets/images/college2.jpeg" alt="College">
@@ -429,13 +447,16 @@
                         <div class="rating">
                             <span class="stars">4.7 ★★★★★</span>
                         </div>
-
-                        <p class="package">Avg package : ₹20–30 LPA</p>
-                        <a href="./college_list.html" class="view-link">View list</a>
+                        <div class="card-bottom">
+                            <span class="package">Avg package : ₹20–30 LPA</span>
+                           <a href="./assets/brochures/iit-nit-brochure.pdf" class="cta-brochure" download>
+                            Brochure <span>⬇</span>
+                        </a>
+                        </div>
                     </div>
 
                     <!-- CARD -->
-                    <div class="college-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="college-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="college-img">
                             <span class="badge">IITs & NITs</span>
                             <img src="../assets/images/college.png" alt="College">
@@ -448,16 +469,17 @@
                             <span class="stars">4.7 ★★★★★</span>
                         </div>
 
-                        <p class="package">Avg package : ₹20–30 LPA</p>
-                        <a href="./college_list.html" class="view-link">View list</a>
+                        <div class="card-bottom">
+                            <span class="package">Avg package : ₹20–30 LPA</span>
+                         <a href="./assets/brochures/iit-nit-brochure.pdf" class="cta-brochure" download>
+                            Brochure <span>⬇</span>
+                        </a>
+                        </div>
                     </div>
 
                 </div>
-
-                <div class="view-more">
-                    <a href="#">View More</a>
-                </div>
             </section>
+
 
 
 
@@ -468,7 +490,7 @@
 
 
             <!-- Photos & Videos -->
-            <div class="card" data-aos="fade-left" data-aos-delay="100">
+            <div class="card-img" data-aos="fade-left" data-aos-delay="100">
 
                 <h3>Photos and Videos</h3>
 
