@@ -354,7 +354,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-  
+
 }
 
 /* Rating badge */
@@ -592,14 +592,6 @@ body {
         /* optional spacing */
     }
 
-    .tabs {
-        width: 95%;
-        margin: 0 auto;
-        margin-top: 16px;
-        /* spacing below hero-card */
-        z-index: 10;
-        /* keep it above background if needed */
-    }
 
     .container {
         padding: 3px 10px;
@@ -1458,7 +1450,7 @@ td {
 }
 
 .discover-section {
-padding-bottom: 10px;
+    padding-bottom: 10px;
     background: #fff;
 }
 
@@ -1579,12 +1571,14 @@ padding-bottom: 10px;
     }
 
     .college-card {
-        flex: 0 0 80%; /* width of each card in scroll */
+        flex: 0 0 80%;
+        /* width of each card in scroll */
         scroll-snap-align: start;
     }
 
     .college-grid::-webkit-scrollbar {
-        display: none; /* hide scrollbar for cleaner look */
+        display: none;
+        /* hide scrollbar for cleaner look */
     }
 
     .college-grid {
@@ -1928,13 +1922,38 @@ padding-bottom: 10px;
 
     .tabs {
         margin-top: 100px;
-        padding-top: 480px;
+        padding-top: 380px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .highlights {
         grid-template-columns: 1fr;
     }
 }
+
+@media(max-width:768px) {
+    .hero {
+        height: 35vh;
+    }
+
+    .hero-card {
+        bottom: -50px;
+    }
+
+    .tabs {
+        margin-top: 100px;
+        padding-top: 380px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
 /* Section header */
 .section-header {
@@ -2082,6 +2101,7 @@ padding-bottom: 10px;
         font-size: 14px;
     }
 }
+
 /* BROCHURE / VIEW BUTTON */
 .cta-brochure,
 .cta-view {

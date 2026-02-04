@@ -75,10 +75,12 @@ function renderColleges(list) {
   <div class="college-card">
 
     <!-- LEFT IMAGE -->
-    <div class="college-img">
-      <img src="${c.image}" alt="${c.name}">
-      <span class="guide-badge">Guide2Me Rating<br>${c.guideRating}</span>
-    </div>
+    <!-- LEFT IMAGE -->
+<div class="college-img">
+  <img src="${c.image}" alt="${c.name}" onclick="location.href='./college_details.html'" style="cursor:pointer;">
+  <span class="guide-badge">Guide2Me Rating<br>${c.guideRating}</span>
+</div>
+
 
     <!-- RIGHT CONTENT -->
     <div class="college-content">
