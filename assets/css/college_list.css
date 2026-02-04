@@ -34,12 +34,18 @@
     box-sizing: border-box;
     font-family: var(--font-main);
 }
-
+html,
 body {
-    background: var(--light-bg);
-    color: var(--text-dark);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    font-family: var(--font-main);
+    background: var(--white);
+    color: var(--text-dark);
 }
+
 
 .section-wrapper {
     padding: 20px var(--page-body-padding);
@@ -51,6 +57,14 @@ body {
         /* tighter padding for mobile */
     }
 }
+/* MOBILE OVERRIDE */
+@media (max-width: 768px) {
+    :root {
+        --page-padding: 16px;
+        --page-body-padding: 16px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .section-wrapper {
