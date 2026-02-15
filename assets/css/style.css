@@ -42,9 +42,11 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: auto;  
     font-family: var(--font-main);
     background: var(--white);
     color: var(--text-dark);
+    scroll-behavior: smooth; 
 }
 
 
@@ -894,18 +896,36 @@ body {
 
 /* CARD */
 .location-card {
-    min-width: 160px;
+    /* min-width: 160px;
     height: 110px;
     border-radius: 14px;
     overflow: hidden;
     position: relative;
-    flex-shrink: 0;
+    flex-shrink: 0; */
+    flex: 0 0 220px;   /* fixed width card */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
 }
 
 .location-card img {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
+    object-fit: cover; */
+    width: 100%;
+    height: 140px;
     object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .location-card {
+        flex: 0 0 180px; /* slightly smaller cards */
+    }
+
+    .location-card img {
+        height: 120px;
+    }
 }
 
 /* TEXT */
@@ -1286,14 +1306,26 @@ body {
         min-height: 40px;
     }
 }
-
+/* 
 .course-card {
     display: flex;
     flex-direction: column;
     height: 300px;
 
-    /* mobile */
+
+} */
+.course-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;   /* allows content to expand */
+    flex: 0 0 260px;     /* fixed width for horizontal scroll */
 }
+
+.course-scroll {
+    align-items: stretch; /* prevents vertical clipping */
+    padding-bottom: 6px;  /* breathing space */
+}
+
 
 @media (min-width: 769px) {
     .course-card {
@@ -1308,6 +1340,58 @@ body {
     border-radius: 14px;
     background: #fff;
     box-sizing: border-box;
+}
+
+/* Desktop / Tablet row for rating + brochure */
+.cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Left column: rating + avg package */
+.cta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Rating styling */
+.cta-rating {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #f59e0b;
+}
+
+.cta-rating span {
+    color: #374151;
+    margin-left: 4px;
+}
+
+/* Avg package */
+.cta-sub {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Brochure button */
+.cta-brochure {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 6px 14px;
+    margin-left: auto; /* pushes button to right */
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.cta-brochure:hover {
+    background-color: #218838;
 }
 
 /* HEADER */
@@ -1432,7 +1516,7 @@ body {
 }
 
 .cta-sub {
-    font-size: 13px;
+    font-size: 12px;
     color: #6b7280;
 }
 
@@ -1446,7 +1530,7 @@ body {
     /* green button */
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 20px;
     font-weight: 500;
     font-size: 14px;
     transition: background-color 0.3s;
@@ -1537,6 +1621,7 @@ body {
         justify-content: space-between;
         gap: 12px;
     }
+    
 
     /* Left column */
     .cta-left {
@@ -2100,11 +2185,17 @@ body {
 
 
 
+.testimonials-inner .subtitle {
+  margin-bottom: 20px;
+}
+
+
 /* TITLE */
 .title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 4px;
+    
 }
 
 

@@ -543,6 +543,7 @@ body {
     padding: 14px;
     margin-bottom: 18px;
     align-items: stretch;
+    border: 2px solid var(--border-light);
     /* IMPORTANT */
 }
 
@@ -856,6 +857,7 @@ body {
     .college-card {
         flex-direction: column;
         gap: 12px;
+        border: 2px solid var(--border-light);
     }
 
     .college-img {
@@ -963,7 +965,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 40px var(--page-body-padding)
 }
 
@@ -1813,15 +1815,17 @@ body {
 
 /* Apply button */
 .cta-apply {
-    background: #2563eb;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-left: auto; /* pushes button to right */
+    background-color: #28a745;
     color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s;
     border: none;
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .cta-apply:hover {
