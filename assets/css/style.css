@@ -25,6 +25,10 @@
 
     --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
     --font-main: 'Nunito', sans-serif;
+    --primary-orange: #f28c38;
+    --text-gray: #555;
+    --border-color: #ccc;
+    --blue-link: #0056b3;
 }
 
 /* ================= GLOBAL ================= */
@@ -59,6 +63,84 @@ body {
 }
 
 /* ================= HEADER ================= */
+
+  
+.header-logo {
+    height: 36px;        /* desktop size */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  /* ===== TABLET ===== */
+@media (max-width: 992px) {
+    .main-nav {
+      display: none;          /* hide nav (or replace with menu later) */
+    }
+  
+    .search-input {
+      width: 160px;
+    }
+  }
+  
+  /* ===== MOBILE ===== */
+  @media (max-width: 600px) {
+    .g-header {
+      padding: 12px 16px;
+    }
+  
+    .modal-logo {
+      height: 30px;           /* smaller logo */
+    }
+  
+    .search-input {
+      display: none;          /* optional */
+    }
+  
+    .header-right {
+      gap: 8px;
+    }
+  
+    .signup-btn {
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+  
+    .login-link {
+      font-size: 13px;
+    }
+  }
+  
+    
+  /* ===== SMALL MOBILE (320px) ===== */
+@media (max-width: 360px) {
+
+    .g-header {
+      padding: 8px 10px;
+    }
+  
+    .modal-logo {
+      height: 24px;          /* smaller logo */
+    }
+  
+    .header-left {
+      gap: 6px;
+    }
+  
+    .login-link {
+      display: none;         /* hide to save space */
+    }
+  
+    .signup-btn {
+      padding: 5px 8px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+  
+    .header-right {
+      gap: 6px;
+    }
+  }
+  
 .g-header {
     display: flex;
     justify-content: space-between;
@@ -3462,3 +3544,98 @@ body {
         margin-bottom: 80px;
     }
 }
+
+/* Logo Modal */
+
+  
+  .modal-logo {
+  max-width: 160px;   /* 👈 control logo size */
+  width: 100%;
+  height: auto;       /* keeps aspect ratio */
+  object-fit: contain;
+}
+  
+  .modal-overlay {
+  display: none; /* 👈 hide initially */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+  .modal-card {
+    background: white; width: 400px; padding: 30px; border-radius: 8px;
+    position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: center;
+  }
+  
+  .close-btn {
+    position: absolute; top: 15px; right: 20px; border: none; 
+    background: none; font-size: 24px; cursor: pointer; color: #888;
+  }
+  
+  /* Header & Logo */
+  .logo { color: #00768a; margin-bottom: 20px; font-weight: bold; }
+  
+  .features {
+    display: flex; justify-content: space-between; margin-bottom: 25px; font-size: 13px;
+  }
+  
+  /* Buttons */
+  .google-btn {
+    width: 100%; padding: 10px; border: 1px solid #4285f4; background: #4285f4;
+    color: white; border-radius: 5px; font-weight: bold; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .google-btn img { width: 18px; background: white; padding: 2px; border-radius: 2px; }
+  
+  .divider {
+    margin: 20px 0; border-bottom: 1px solid #ddd; line-height: 0.1em; color: #888;
+  }
+  .divider::before { content: ""; } /* Just for text alignment */
+  
+  /* Inputs */
+  .signup-form input, .phone-input select {
+    width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color);
+    border-radius: 4px; box-sizing: border-box; font-size: 16px;
+  }
+  
+  .phone-input { display: flex; gap: 0; }
+  .phone-input select { width: 35%; border-right: none; border-radius: 4px 0 0 4px; }
+  .phone-input input { border-radius: 0 4px 4px 0; }
+  .checkbox-container {
+  display: grid;
+  grid-template-columns: 18px 1fr; /* checkbox + text */
+  align-items: start;
+  column-gap: 10px;
+
+  width: 100%;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin: 3px 0 0 0; /* align with first text line */
+}
+
+.checkbox-container label {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #444;
+}
+
+  .submit-btn {
+    width: 60%; background: var(--primary-orange); color: white; border: none;
+    padding: 12px; border-radius: 6px; font-size: 18px; font-weight: bold; cursor: pointer;
+  }
+  
+  .submit-btn:hover, .google-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .footer-text { margin-top: 20px; font-size: 15px; }
+  .footer-text a { color: var(--blue-link); text-decoration: none; font-weight: bold; }

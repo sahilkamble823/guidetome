@@ -76,6 +76,83 @@ body {
 
 
 /* ================= HEADER ================= */
+
+.haeder-logo {
+    height: 36px;        /* desktop size */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  /* ===== TABLET ===== */
+@media (max-width: 992px) {
+    .main-nav {
+      display: none;          /* hide nav (or replace with menu later) */
+    }
+  
+    .search-input {
+      width: 160px;
+    }
+  }
+  
+  /* ===== MOBILE ===== */
+  @media (max-width: 600px) {
+    .g-header {
+      padding: 12px 16px;
+    }
+  
+    .modal-logo {
+      height: 30px;           /* smaller logo */
+    }
+  
+    .search-input {
+      display: none;          /* optional */
+    }
+  
+    .header-right {
+      gap: 8px;
+    }
+  
+    .signup-btn {
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+  
+    .login-link {
+      font-size: 13px;
+    }
+  }
+  
+    
+  /* ===== SMALL MOBILE (320px) ===== */
+@media (max-width: 360px) {
+
+    .g-header {
+      padding: 8px 10px;
+    }
+  
+    .modal-logo {
+      height: 24px;          /* smaller logo */
+    }
+  
+    .header-left {
+      gap: 6px;
+    }
+  
+    .login-link {
+      display: none;         /* hide to save space */
+    }
+  
+    .signup-btn {
+      padding: 5px 8px;
+      font-size: 12px;
+      border-radius: 6px;
+    }
+  
+    .header-right {
+      gap: 6px;
+    }
+  }
+  
 .g-header {
     display: flex;
     justify-content: space-between;
@@ -1843,3 +1920,11 @@ body {
         width: auto;
     }
 }
+
+/* Modal Logo */
+.modal-logo {
+    max-width: 160px;   /* 👈 control logo size */
+    width: 100%;
+    height: auto;       /* keeps aspect ratio */
+    object-fit: contain;
+  }

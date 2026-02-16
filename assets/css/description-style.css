@@ -59,6 +59,48 @@ body {
 }
 
 /* ================= HEADER ================= */
+/* ===== EXTRA SMALL DEVICES (≤360px / 320px phones) ===== */
+@media (max-width: 360px) {
+
+    .g-header {
+        padding: 10px 10px;      /* reduce side padding */
+    }
+
+    .logo {
+        font-size: 16px;         /* smaller logo text */
+        margin-left: 4px;
+    }
+
+    .header-right {
+        gap: 6px;
+    }
+
+    .login-link {
+        display: none;           /* hide to save space */
+    }
+
+    .signup-btn {
+        padding: 5px 8px;
+        font-size: 11px;
+        border-radius: 5px;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+
+    .search-input {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+}
+
 .g-header {
     background: #fff;
     padding: 20px 150px;
@@ -2288,3 +2330,11 @@ td {
 .cta-view:hover {
     background-color: #218838;
 }
+/* Modal Logo */
+.modal-logo {
+    max-width: 160px;   /* 👈 control logo size */
+    width: 100%;
+    height: auto;       /* keeps aspect ratio */
+    object-fit: contain;
+  }
+    
