@@ -2259,6 +2259,7 @@ body {
     background: #f8fbff;
     border: 1px solid #e3e9f3;
     border-radius: 16px;
+    
 }
 
 .testimonials-inner {
@@ -2285,13 +2286,14 @@ body {
 /* CARD ROW */
 .cards {
     display: flex;
-    gap: 28px;
+    gap: 16px;
+    justify-content: space-around;
 }
 
 /* CARD */
 .card {
-    width: 220px;
-    height: 300px;
+    width: 250px;
+    height: 320px;
     border-radius: 14px;
     background-size: cover;
     background-position: center;
